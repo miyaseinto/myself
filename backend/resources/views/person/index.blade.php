@@ -1,6 +1,6 @@
 @extends('layouts.helloapp')
 
-@section('title' ,'Index')
+@section('title' ,'Person.index')
 
 @section('menubar')
   @parent
@@ -9,12 +9,10 @@
 
 @section('content')
     <table>
-    <tr><th>Name</tr><th>Mail</th><th>Age</th></tr>
+    <tr><th>Data</tr></th>
     @foreach ($items as $item)
         <tr>
-            <td>{{$item->name}}</td>
-            <td>{{$item->email}}</td>
-            <td>{{$item->age}}</td>
+            <td>{{$item->getData()}}</td>
         </tr>
     @endforeach
     </table>
